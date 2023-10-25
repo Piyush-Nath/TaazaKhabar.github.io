@@ -1,1 +1,1 @@
-# TaazaKhabar.github.io
+# Taaza-Khabar
