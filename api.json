@@ -1,0 +1,24 @@
+const fs = require('fs');
+
+// Your API key
+const API_KEY = "25431d0292824d24b04fc48176df36e5";
+
+// Create a JSON object with the API key
+const apiKeyObject = {
+    "api_key": API_KEY
+};
+
+// Convert the data to a JSON string
+const jsonData = JSON.stringify(apiKeyObject, null, 2);
+
+// Specify the filename to save the JSON data
+const fileName = 'api_key.json';
+
+// Write the JSON string to the file
+fs.writeFile(fileName, jsonData, (err) => {
+    if (err) {
+        console.error('Error writing JSON file:', err);
+    } else {
+        console.log(`API key saved to ${fileName} successfully.`);
+    }
+});
